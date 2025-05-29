@@ -18,11 +18,11 @@ export function CtaSection() {
             </Button>
             <div className="flex items-center space-x-3 text-foreground/90">
               <Phone className="h-6 w-6" />
-              <span>+7 (XXX) XXX-XX-XX</span>
+              <span>+7 (985) 488-64-75</span>
             </div>
             <div className="flex items-center space-x-3 text-foreground/90">
               <Mail className="h-6 w-6" />
-              <span>info@emd.education.ru</span>
+              <span>rslahta@emd.one</span>
             </div>
           </div>
         </div>
