@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react"; // Changed from "react-dom" and "useFormState"
+import { useFormStatus } from "react-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
@@ -26,7 +27,7 @@ function SubmitButton() {
 }
 
 export function PersonalizedLearningForm() {
-  const [state, formAction] = useFormState(generateLearningPathAction, initialState);
+  const [state, formAction] = useActionState(generateLearningPathAction, initialState); // Changed from useFormState
   const { toast } = useToast();
 
   useEffect(() => {
