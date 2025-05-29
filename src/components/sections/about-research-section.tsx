@@ -62,7 +62,7 @@ export function AboutResearchSection() {
   return (
     <SectionWrapper id="about" className="bg-primary/5">
       <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary">Почему NeuroCodePro?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-primary">Почему EMD.education?</h2>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
           Корпоративное обучение нейрокодингу и создание специализированных рабочих пространств в России представляют собой высокорентабельное направление. Это обусловлено стремительным ростом спроса на AI-компетенции, стратегической важностью развития отечественных технологий и прогнозируемым дефицитом кадров.
         </p>

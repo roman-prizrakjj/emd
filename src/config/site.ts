@@ -17,10 +17,10 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "NeuroCodePro",
+  name: "EMD.education",
   description: "Корпоративное обучение Нейрокодингу и принципам внедрения AI инструментов в компании России.",
-  url: "https://neurocodepro.example.com", // Replace with actual URL
-  ogImage: "https://neurocodepro.example.com/og.jpg", // Replace with actual OG image
+  url: "https://emd.education.example.com", // Replace with actual URL
+  ogImage: "https://emd.education.example.com/og.jpg", // Replace with actual OG image
   mainNav: [
     {
       title: "Главная",

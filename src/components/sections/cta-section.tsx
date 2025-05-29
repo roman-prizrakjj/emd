@@ -22,14 +22,14 @@ export function CtaSection() {
             </div>
             <div className="flex items-center space-x-3 text-primary-foreground/90">
               <Mail className="h-6 w-6" />
-              <span>info@neurocodepro.ru</span>
+              <span>info@emd.education.ru</span>
             </div>
           </div>
         </div>
         <div className="hidden md:block relative aspect-square max-w-md mx-auto">
            <Image
             src="https://placehold.co/600x600.png"
-            alt="Команда NeuroCodePro обсуждает проект"
+            alt="Команда EMD.education обсуждает проект"
             layout="fill"
             objectFit="cover"
             className="rounded-lg shadow-2xl"

@@ -21,7 +21,7 @@ export function HeroSection() {
       <div className="container relative z-10 flex flex-col items-center text-center py-16 md:py-24 lg:py-32">
         <Cpu className="h-16 w-16 md:h-24 md:w-24 mb-6 text-accent animate-pulse" />
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-md">
-          NeuroCodePro
+          EMD.education
         </h1>
         <p className="mt-6 max-w-3xl text-lg sm:text-xl md:text-2xl text-primary-foreground/90 drop-shadow-sm">
           Корпоративное обучение Нейрокодингу и внедрение AI инструментов для российских компаний. Повысьте эффективность вашего бизнеса с передовыми технологиями.
