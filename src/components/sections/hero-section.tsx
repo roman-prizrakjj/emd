@@ -14,7 +14,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="hero" className="relative bg-gradient-to-b from-primary via-primary to-background text-primary-foreground pt-16 md:pt-24 lg:pt-32">
+    <section id="hero" className="relative bg-gradient-to-b from-background to-primary/20 text-foreground pt-16 md:pt-24 lg:pt-32">
       <div className="absolute inset-0 opacity-10">
         {/* Subtle background pattern or image if desired */}
       </div>
@@ -23,14 +23,19 @@ export function HeroSection() {
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-md">
           EMD.education
         </h1>
-        <p className="mt-6 max-w-3xl text-lg sm:text-xl md:text-2xl text-primary-foreground/90 drop-shadow-sm">
+        <p className="mt-6 max-w-3xl text-lg sm:text-xl md:text-2xl text-foreground/90 drop-shadow-sm">
           Корпоративное обучение Нейрокодингу и внедрение AI инструментов для российских компаний. Повысьте эффективность вашего бизнеса с передовыми технологиями.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={scrollToContact}>
             Начать сотрудничество <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <Button size="lg" variant="outline" className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-foreground/50 text-foreground hover:bg-foreground/10 hover:text-background" 
+            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Узнать больше об услугах
           </Button>
         </div>

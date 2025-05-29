@@ -47,7 +47,7 @@ export function SiteHeader() {
               onClick={() => handleNavLinkClick(item.href)}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                isScrolled ? "text-foreground" : "text-primary-foreground md:text-foreground" // Adjust text color based on scroll for better visibility on hero
+                "text-foreground" 
               )}
             >
               {item.title}
@@ -58,11 +58,11 @@ export function SiteHeader() {
           <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className={cn(isScrolled ? "text-foreground" : "text-primary-foreground md:text-foreground")} />
+                <Menu className={cn("text-foreground")} />
                 <span className="sr-only">Открыть меню</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="bg-background text-foreground">
               <div className="flex flex-col space-y-4 p-4">
                 <Link href="/" className="flex items-center space-x-2 mb-4" onClick={() => setMobileNavOpen(false)}>
                   <Brain className="h-8 w-8 text-primary" />

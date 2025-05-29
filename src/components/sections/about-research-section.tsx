@@ -60,7 +60,7 @@ const researchFactors: ResearchFactor[] = [
 
 export function AboutResearchSection() {
   return (
-    <SectionWrapper id="about" className="bg-primary/5">
+    <SectionWrapper id="about" className="bg-muted/20">
       <div className="text-center mb-12 md:mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-primary">Почему EMD.education?</h2>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -72,8 +72,8 @@ export function AboutResearchSection() {
         <h3 className="text-2xl md:text-3xl font-semibold text-center mb-8 text-foreground">Ключевые факторы прибыльности</h3>
         <Accordion type="single" collapsible className="w-full">
           {researchFactors.map((factor) => (
-            <AccordionItem value={factor.id} key={factor.id} className="mb-4 border bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <AccordionTrigger className="p-6 text-lg font-medium hover:no-underline text-left">
+            <AccordionItem value={factor.id} key={factor.id} className="mb-4 border bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <AccordionTrigger className="p-6 text-lg font-medium hover:no-underline text-left text-foreground">
                 <span className="mr-3 text-2xl">{factor.emoji}</span> {factor.title}
               </AccordionTrigger>
               <AccordionContent className="p-6 pt-0 text-muted-foreground space-y-3">
