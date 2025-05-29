@@ -18,7 +18,7 @@ const initialState: PersonalizedLearningFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">
+    <Button type="submit" disabled={pending} className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
       Сгенерировать План
     </Button>
@@ -35,13 +35,13 @@ export function PersonalizedLearningForm() {
         toast({
           title: "Успех!",
           description: state.message,
-          variant: "default", // Uses theme colors for toast
+          variant: "default", 
         });
       } else {
         toast({
           title: "Ошибка",
           description: state.message,
-          variant: "destructive", // Uses theme colors for toast
+          variant: "destructive",
         });
         if (state.errors?._form) {
            state.errors._form.forEach(errMsg => toast({ title: "Ошибка Формы", description: errMsg, variant: "destructive" }));
@@ -54,14 +54,14 @@ export function PersonalizedLearningForm() {
     <Card className="w-full max-w-2xl mx-auto shadow-lg bg-card text-card-foreground">
       <CardHeader>
         <CardTitle className="text-2xl text-primary">Создайте Персональный План Обучения</CardTitle>
-        <CardDescription>
+        <CardDescription className="text-muted-foreground">
           Введите данные о навыках вашей команды и потребностях компании, чтобы наш AI сгенерировал индивидуальные пути развития.
         </CardDescription>
       </CardHeader>
       <form action={formAction}>
         <CardContent className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="teamSkillsData" className="text-lg font-medium">Навыки Команды</Label>
+            <Label htmlFor="teamSkillsData" className="text-lg font-medium text-foreground/90">Навыки Команды</Label>
             <Textarea
               id="teamSkillsData"
               name="teamSkillsData"
@@ -72,13 +72,13 @@ export function PersonalizedLearningForm() {
               aria-describedby="teamSkillsData-error"
             />
             {state.errors?.teamSkillsData && (
-              <p id="teamSkillsData-error" className="text-sm text-destructive-foreground"> {/* Adjusted for better visibility on dark red bg if destructive is used directly */}
+              <p id="teamSkillsData-error" className="text-sm text-destructive"> 
                 {state.errors.teamSkillsData.join(", ")}
               </p>
             )}
           </div>
           <div className="space-y-2">
-            <Label htmlFor="companyNeeds" className="text-lg font-medium">Потребности Компании</Label>
+            <Label htmlFor="companyNeeds" className="text-lg font-medium text-foreground/90">Потребности Компании</Label>
             <Textarea
               id="companyNeeds"
               name="companyNeeds"
@@ -89,7 +89,7 @@ export function PersonalizedLearningForm() {
               aria-describedby="companyNeeds-error"
             />
             {state.errors?.companyNeeds && (
-              <p id="companyNeeds-error" className="text-sm text-destructive-foreground">
+              <p id="companyNeeds-error" className="text-sm text-destructive">
                 {state.errors.companyNeeds.join(", ")}
               </p>
             )}
@@ -101,23 +101,23 @@ export function PersonalizedLearningForm() {
       </form>
 
       {state.learningPaths && state.success && (
-        <div className="mt-6 p-6 border-t border-green-600/50 bg-green-700/20 rounded-b-lg">
-          <h3 className="text-xl font-semibold text-green-300 mb-3 flex items-center">
+        <div className="mt-6 p-6 border-t border-green-500/30 bg-green-500/10 rounded-b-lg">
+          <h3 className="text-xl font-semibold text-green-400 mb-3 flex items-center">
             <CheckCircle className="h-6 w-6 mr-2 text-green-400" />
             Сгенерированный План Обучения:
           </h3>
-          <pre className="whitespace-pre-wrap bg-green-800/20 p-4 rounded-md shadow text-sm text-foreground overflow-x-auto">
+          <pre className="whitespace-pre-wrap bg-black/20 p-4 rounded-md shadow text-sm text-foreground/90 overflow-x-auto">
             {state.learningPaths}
           </pre>
         </div>
       )}
       {!state.success && state.message && !state.learningPaths && (
-         <div className="mt-6 p-6 border-t border-red-600/50 bg-red-700/20 rounded-b-lg">
-          <h3 className="text-xl font-semibold text-red-300 mb-3 flex items-center">
+         <div className="mt-6 p-6 border-t border-red-500/30 bg-red-500/10 rounded-b-lg">
+          <h3 className="text-xl font-semibold text-red-400 mb-3 flex items-center">
             <AlertTriangle className="h-6 w-6 mr-2 text-red-400" />
             Результат:
           </h3>
-          <p className="text-red-300">{state.message}</p>
+          <p className="text-red-400">{state.message}</p>
         </div>
       )}
     </Card>

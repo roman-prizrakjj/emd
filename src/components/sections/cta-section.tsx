@@ -5,22 +5,22 @@ import Image from "next/image";
 
 export function CtaSection() {
   return (
-    <SectionWrapper id="contact" className="bg-primary text-primary-foreground">
+    <SectionWrapper id="contact" className="bg-card text-card-foreground"> {/* Changed from bg-primary */}
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Готовы Трансформировать Ваш Бизнес?</h2>
-          <p className="text-lg text-primary-foreground/80 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Готовы Трансформировать Ваш Бизнес?</h2>
+          <p className="text-lg text-foreground/80 mb-8">
             Свяжитесь с нами сегодня, чтобы обсудить ваши потребности в обучении и внедрении AI. Наша команда экспертов поможет вам разработать индивидуальное решение.
           </p>
           <div className="space-y-6">
-            <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button size="lg" variant="default" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
               <Mail className="mr-2 h-5 w-5" /> Запросить консультацию
             </Button>
-            <div className="flex items-center space-x-3 text-primary-foreground/90">
+            <div className="flex items-center space-x-3 text-foreground/90">
               <Phone className="h-6 w-6" />
               <span>+7 (XXX) XXX-XX-XX</span>
             </div>
-            <div className="flex items-center space-x-3 text-primary-foreground/90">
+            <div className="flex items-center space-x-3 text-foreground/90">
               <Mail className="h-6 w-6" />
               <span>info@emd.education.ru</span>
             </div>
