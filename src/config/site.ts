@@ -18,7 +18,7 @@ export type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
   name: "EMD.education",
-  description: "Корпоративное обучение Нейрокодингу и принципам внедрения AI инструментов в компании России.",
+  description: "Корпоративное обучение нейрокодингу и принципам внедрения AI инструментов в компании России.",
   url: "https://emd.education.example.com", // Replace with actual URL
   ogImage: "https://emd.education.example.com/og.jpg", // Replace with actual OG image
   mainNav: [
@@ -47,3 +47,4 @@ export const siteConfig: SiteConfig = {
     // Add social links if any
   },
 };
+

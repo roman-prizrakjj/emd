@@ -24,7 +24,7 @@ export function HeroSection() {
           EMD.education
         </h1>
         <p className="mt-6 max-w-3xl text-lg sm:text-xl md:text-2xl text-foreground/90 drop-shadow-sm">
-          Корпоративное обучение Нейрокодингу и внедрение AI инструментов для российских компаний. Повысьте эффективность вашего бизнеса с передовыми технологиями.
+          Корпоративное обучение нейрокодингу и внедрение AI инструментов для российских компаний. Повысьте эффективность вашего бизнеса с передовыми технологиями.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" onClick={scrollToContact}>
@@ -45,3 +45,4 @@ export function HeroSection() {
     </section>
   );
 }
+
